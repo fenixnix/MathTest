@@ -1,12 +1,12 @@
 ﻿<Properties StartupConfiguration="{BC9D0787-99A7-4263-93B1-4C4D5935499E}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MathTest/SubtractionQuestion.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MathTest/Program.cs">
     <Files>
-      <File FileName="MathTest/AdditionQuestion.cs" Line="13" Column="3" />
-      <File FileName="MathTest/MultiplicationQuestion.cs" Line="26" Column="14" />
-      <File FileName="MathTest/Program.cs" Line="36" Column="15" />
+      <File FileName="MathTest/AdditionQuestion.cs" Line="11" Column="10" />
+      <File FileName="MathTest/MultiplicationQuestion.cs" Line="17" Column="10" />
+      <File FileName="MathTest/Program.cs" Line="33" Column="30" />
       <File FileName="MathTest/Answer.cs" Line="9" Column="21" />
-      <File FileName="MathTest/Question.cs" Line="11" Column="4" />
-      <File FileName="MathTest/SubtractionQuestion.cs" Line="12" Column="34" />
+      <File FileName="MathTest/Question.cs" Line="13" Column="3" />
+      <File FileName="MathTest/SubtractionQuestion.cs" Line="2" Column="34" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|x86" />
