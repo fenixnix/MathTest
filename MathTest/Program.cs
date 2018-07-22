@@ -22,17 +22,25 @@ namespace MathTest
             float totelScore = 100.0f;
             int qustionCnt = 20;
 
-            MultiplicationQustion q = new MultiplicationQustion();
-
-            var qus = q.select(qustionCnt);
-
             float score = totelScore;
             float scorePerQustion = totelScore / qustionCnt;
 
-            Console.WriteLine("乘法测试，{0}题，满分{1}分", qustionCnt, totelScore);
+            Console.WriteLine("算术测试，{0}题，满分{1}分", qustionCnt, totelScore);
             Console.WriteLine("*****************************");
-            Console.WriteLine("按下任意键开始测试,并开始计时！");
-            Console.ReadKey();
+            Console.WriteLine("按下数字键选择题目类型开始测试,并开始计时！");
+			Console.WriteLine("1.加法");
+			Console.WriteLine("2.减法");
+			Console.WriteLine("3.乘法");
+			var sel = Console.ReadLine();
+
+			Question q;
+			switch(sel){
+				case "1":q = new AdditionQuestion();break;
+				case "2":q = new SubtractionQuestion();break;
+				case "3":q = new MultiplicationQuestion();break;
+				default:q = new AdditionQuestion();break;
+			}
+            var qus = q.select(qustionCnt);
 
             timeCnt = 0;
             Timer timer = new Timer(OnTimer,"",0,100);
@@ -41,10 +49,10 @@ namespace MathTest
             {
                 Console.WriteLine(" ");
                 Console.WriteLine("第{0:d}题", i + 1);
-                Console.WriteLine(qus[i]);
+                Console.WriteLine(qus[i] + " = ?");
 
                 string input;
-                Regex reg = new Regex("[\\d]{1,2}");
+                Regex reg = new Regex("[\\d]{1,3}");
                 while (true)
                 {
                     input = Console.ReadLine();
@@ -58,9 +66,9 @@ namespace MathTest
                 }
                 //Console.WriteLine(input);
                 //Console.ReadKey();
-
+                
                 var ans = int.Parse(input);
-                var correctAns = MultiplicationQustion.Answer(qus[i]);
+				var correctAns = Answer.Calc(qus[i]);
                 if (ans == correctAns)
                 {
                     Console.WriteLine("答对了！（'v'）");
