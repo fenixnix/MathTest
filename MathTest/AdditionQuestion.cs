@@ -12,17 +12,7 @@ namespace MathTest
 
 		public override List<string> Init()
 		{
-			List<string> tmp = new List<string>();
-			for (int i = 0; i <= 100; i++)
-			{
-				for (int j = 0; j + i <= 100; j++)
-				{
-					string q = i.ToString() + " + " + j.ToString();
-					//Console.WriteLine(q);
-					tmp.Add(q);
-				}
-			}
-			return tmp;
+			return Addition(0, 100);
 		}
     }
 }

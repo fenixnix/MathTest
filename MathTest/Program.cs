@@ -20,7 +20,7 @@ namespace MathTest
             Console.WriteLine("你有{0}块钱",token);
 
             float totelScore = 100.0f;
-            int qustionCnt = 20;
+            int qustionCnt = 25;
 
             float score = totelScore;
             float scorePerQustion = totelScore / qustionCnt;
@@ -30,15 +30,18 @@ namespace MathTest
             Console.WriteLine("按下数字键选择题目类型开始测试,并开始计时！");
 			Console.WriteLine("1.加法");
 			Console.WriteLine("2.减法");
-			Console.WriteLine("3.乘法");
+			Console.WriteLine("3.加减混合运算");
+			Console.WriteLine("4.乘法");    
+
 			var sel = Console.ReadLine();
 
-			Question q;
+			Question q = new Question();
 			switch(sel){
-				case "1":q = new AdditionQuestion();break;
-				case "2":q = new SubtractionQuestion();break;
-				case "3":q = new MultiplicationQuestion();break;
-				default:q = new AdditionQuestion();break;
+				case "1":q.Add();break;
+				case "2":q.Sub();break;
+				case "3":q.Add();q.Sub(); break;
+				case "4":q.Mul();break;
+				default:break;
 			}
             var qus = q.select(qustionCnt);
 
