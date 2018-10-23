@@ -20,7 +20,7 @@ namespace MathTest
             Console.WriteLine("你有{0}块钱",token);
 
             float totelScore = 100.0f;
-            int qustionCnt = 25;
+            int qustionCnt = 50;
 
             float score = totelScore;
             float scorePerQustion = totelScore / qustionCnt;
@@ -37,9 +37,9 @@ namespace MathTest
 
 			Question q = new Question();
 			switch(sel){
-				case "1":q.Add();break;
-				case "2":q.Sub();break;
-				case "3":q.Add();q.Sub(); break;
+				case "1":q.Add(0,20);break;
+				case "2":q.Sub(0,20);break;
+				case "3":q.Add(0,20);q.Sub(0,20); break;
 				case "4":q.Mul();break;
 				default:break;
 			}

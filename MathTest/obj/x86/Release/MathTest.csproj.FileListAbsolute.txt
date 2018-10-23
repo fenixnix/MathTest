@@ -1,0 +1,3 @@
+/home/sai/Project/MathTest/MathTest/bin/Release/MathTest.exe
+/home/sai/Project/MathTest/MathTest/obj/x86/Release/MathTest.csproj.CoreCompileInputs.cache
+/home/sai/Project/MathTest/MathTest/obj/x86/Release/MathTest.exe
