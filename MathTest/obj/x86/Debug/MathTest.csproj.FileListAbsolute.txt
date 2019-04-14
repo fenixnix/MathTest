@@ -1,0 +1,6 @@
+D:\Project\MathTest\MathTest\bin\Debug\MathTest.exe
+D:\Project\MathTest\MathTest\bin\Debug\MathTest.pdb
+D:\Project\MathTest\MathTest\obj\x86\Debug\MathTest.csprojAssemblyReference.cache
+D:\Project\MathTest\MathTest\obj\x86\Debug\MathTest.csproj.CoreCompileInputs.cache
+D:\Project\MathTest\MathTest\obj\x86\Debug\MathTest.exe
+D:\Project\MathTest\MathTest\obj\x86\Debug\MathTest.pdb
