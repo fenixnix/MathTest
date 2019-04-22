@@ -33,6 +33,7 @@ namespace MathTest
 			Console.WriteLine("3.加减混合运算");
 			Console.WriteLine("4.乘法");
             Console.WriteLine("5.加法一年级");
+            Console.WriteLine("6.超级加法");
 
 			var sel = Console.ReadLine();
 
@@ -42,7 +43,8 @@ namespace MathTest
 				case "2":q.Sub(0,20);break;
 				case "3":q.Add(0,20);q.Sub(0,20); break;
 				case "4":q.Mul();break;
-                case "5": q.Add(0,99); break;
+                case "5": q.Add(10,99); break;
+                case "6": q.Add(99, 999);break;
                 default:break;
 			}
             var qus = q.select(qustionCnt);
