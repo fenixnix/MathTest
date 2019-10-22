@@ -27,6 +27,17 @@ namespace MathTest
 		public void Mul(int min = 2, int max = 9)
         {
 			allQuestion.AddRange(Multiplication(min, max));
+            PrintMulTable();
+        }
+
+        public void PrintMulTable(){
+            Console.WriteLine("乘法口诀表:");
+            for(int j = 1;j<10;j++){
+                for(int i = 1;i<=j;i++){
+                   Console.Write($"{i} * {j} = {i*j}\t");
+                }
+                Console.WriteLine();
+            }
         }
         
 		static public List<string> Addition(int min, int max){

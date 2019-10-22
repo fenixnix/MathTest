@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Threading;
-using System.Configuration;
 using System.Text.RegularExpressions;
 
 namespace MathTest
@@ -11,13 +10,13 @@ namespace MathTest
 
         static void Main(string[] args)
         {
-            Configuration cfg = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-            if(cfg.AppSettings.Settings["Token"] == null)
-            {
-                cfg.AppSettings.Settings.Add("Token", "0");
-            }
-            int token = (int)(float.Parse(cfg.AppSettings.Settings["Token"].Value.ToString()));
-            Console.WriteLine("你有{0}块钱",token);
+            //Configuration cfg = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            //if(cfg.AppSettings.Settings["Token"] == null)
+            //{
+                //cfg.AppSettings.Settings.Add("Token", "0");
+            //}
+            //int token = (int)(float.Parse(cfg.AppSettings.Settings["Token"].Value.ToString()));
+            //Console.WriteLine("你有{0}块钱",token);
 
             float totelScore = 100.0f;
             int qustionCnt = 50;
@@ -98,8 +97,8 @@ namespace MathTest
             {
                 Console.WriteLine("你实在是太棒了");
             }
-            cfg.AppSettings.Settings["Token"].Value = (token + (int)score).ToString();
-            cfg.Save();
+            //cfg.AppSettings.Settings["Token"].Value = (token + (int)score).ToString();
+            //cfg.Save();
             Console.ReadKey();
         }
 
