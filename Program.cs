@@ -21,10 +21,10 @@ namespace MathTest
             float totelScore = 100.0f;
             int qustionCnt = 50;
 
-            float score = totelScore;
             float scorePerQustion = totelScore / qustionCnt;
+            float score = 0;
 
-            Console.WriteLine("算术测试，{0}题，满分{1}分", qustionCnt, totelScore);
+            Console.WriteLine($"算术测试，{qustionCnt}题，满分{totelScore}分");
             Console.WriteLine("*****************************");
             Console.WriteLine("按下数字键选择题目类型开始测试,并开始计时！");
 			Console.WriteLine("1.加法");
@@ -68,7 +68,7 @@ namespace MathTest
                         input = match.Value;
                         break;
                     }
-                    Console.WriteLine("???无法识别输入???");
+                    Console.WriteLine("???不能识别答案???");
                 }
                 //Console.WriteLine(input);
                 //Console.ReadKey();
@@ -78,14 +78,15 @@ namespace MathTest
                 if (ans == correctAns)
                 {
                     Console.WriteLine("答对了！（'v'）");
+                    score += scorePerQustion;
                 }
                 else
                 {
                     Console.WriteLine("回答错误！（'^'）");
                     Console.WriteLine("答案是：{0:d}", correctAns);
-                    score -= scorePerQustion;
+                    //score -= scorePerQustion;
                 }
-
+                Console.WriteLine($"当前分数{(int)score}");
                 float tf = (float)timeCnt / 10.0f;
                 Console.WriteLine("定时{0:f}秒", tf);
             }

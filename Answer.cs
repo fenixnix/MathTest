@@ -21,7 +21,7 @@ namespace MathTest
             {
                 case "+": return v1 + v2;
                 case "-": return v1 - v2;
-                case "*": return v1 * v2;
+                case "x": return v1 * v2;
             }
 
             Console.WriteLine("InValid Question!!!");
